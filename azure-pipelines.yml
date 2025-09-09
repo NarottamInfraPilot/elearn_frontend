@@ -1,0 +1,11 @@
+trigger: none
+pool: humaraFE_VM_Pool
+stages:
+  - stage: npminstall
+    displayName: npm install karke dependency install karna
+    jobs:
+      - job: npminstall
+        steps:
+          - task: Npm@1
+            inputs:
+              command: 'install'
