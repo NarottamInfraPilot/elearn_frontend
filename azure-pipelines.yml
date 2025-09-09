@@ -5,11 +5,15 @@ stages:
     displayName: npm install karke dependency install karna
     jobs:
       - job: npminstall
+        displayName: npm install and run build
         steps:
           - task: Npm@1
+            displayName: npm install
             inputs:
               command: 'install'
           - task: Npm@1
+            displayName: npm run build
             inputs:
               command: 'custom'
               customCommand: 'run build'
+          
