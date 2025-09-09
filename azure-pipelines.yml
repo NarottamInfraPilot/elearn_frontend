@@ -16,4 +16,8 @@ stages:
             inputs:
               command: 'custom'
               customCommand: 'run build'
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Pipeline.Workspace)'
+              publishLocation: 'pipeline'
           
